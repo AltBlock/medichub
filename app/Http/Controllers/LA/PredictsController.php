@@ -318,6 +318,6 @@ class PredictsController extends Controller
 		}
 		//dd($disease_single);
 		//dd($diseaseslist);
-		return view('diseaselist')->with($diseaseslist);
+		return view('disease')->with('diseaselist',$diseaseslist);
 	}
 }

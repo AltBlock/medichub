@@ -70,6 +70,12 @@
 		.single-block label {
 		    padding-left: 15px;
 		}
+        ul.diseaselist{
+            text-align: left;
+            font-size: 22px;
+            font-weight: 500;
+            list-style: none;
+        }
     </style>
 
 </head>
@@ -112,8 +118,8 @@
             <br>
             <br>
             <div class="col-sm-8 col-sm-offset-2">
-                <h2>These are your Potential Disease, Please Visit The Related Doctor</h2>
-                <ul>
+                <h3>These are your Potential Disease, Please Visit The Related Doctor</h3>
+                <ul class="diseaselist">
                     @foreach($diseaselist as $disease)
                         <li>{{ $disease->name }}</li>
                     @endforeach
