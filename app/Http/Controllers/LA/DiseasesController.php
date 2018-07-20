@@ -23,7 +23,7 @@ class DiseasesController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'name';
-	public $listing_cols = ['id', 'name', 'level', 'description'];
+	public $listing_cols = ['id', 'name', 'level', 'description', 'precaution', 'avoid'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

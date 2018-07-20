@@ -70,11 +70,10 @@
 		.single-block label {
 		    padding-left: 15px;
 		}
-        ul.diseaselist{
+        .diseaselist{
             text-align: left;
             font-size: 22px;
             font-weight: 500;
-            list-style: none;
         }
     </style>
 
@@ -114,16 +113,29 @@
 <div id="intro">
     <div class="container">
         <div class="row centered">
-            <h1>Tick All that applies</h1>
-            <br>
-            <br>
             <div class="col-sm-8 col-sm-offset-2">
                 <h3>These are your Potential Disease, Please Visit The Related Doctor</h3>
-                <ul class="diseaselist">
+                <ol class="diseaselist">
                     @foreach($diseaselist as $disease)
-                        <li>{{ $disease->name }}</li>
+                        <li><a href="/diseases/{{ $disease->id }}">{{ $disease->name }}</a></li>
+                        <div class="description">
+                            <ul>
+                                <li>
+                                    <span><strong>Desctiption:</strong></span><br>
+                                    {{ $disease->description }}
+                                </li>
+                                <li>
+                                    <span><strong>Precautions:</strong></span><br>
+                                    {{ $disease->precaution }}
+                                </li>
+                                <li>
+                                    <span><strong>To Avoid:</strong></span><br>
+                                    {{ $disease->avoid }}
+                                </li>
+                            </ul>
+                        </div>
                     @endforeach
-                </ul>
+                </ol>
             </div>
         </div>
         <br>

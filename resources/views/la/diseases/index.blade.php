@@ -62,6 +62,8 @@
 					@la_input($module, 'name')
 					@la_input($module, 'level')
 					@la_input($module, 'description')
+					@la_input($module, 'precaution')
+					@la_input($module, 'avoid')
 					--}}
 				</div>
 			</div>

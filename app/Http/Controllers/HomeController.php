@@ -71,4 +71,7 @@ class HomeController extends Controller
 		// 	]);
 		// }
     }
+    public function singledisease($some){
+        dd($some);
+    }
 }

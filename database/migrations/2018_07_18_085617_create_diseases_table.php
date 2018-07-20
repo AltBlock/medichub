@@ -21,6 +21,8 @@ class CreateDiseasesTable extends Migration
             ["name", "Name", "TextField", false, "", 0, 256, true],
             ["level", "Level", "Multiselect", false, "", 0, 0, false, "@levels"],
             ["description", "Description", "Textarea", false, "", 0, 0, false],
+            ["precaution", "Precautions", "Textarea", false, "", 0, 0, false],
+            ["avoid", "To Avoid", "Textarea", false, "", 0, 0, false],
         ]);
 		
 		/*

@@ -110,6 +110,8 @@
 						@la_display($module, 'name')
 						@la_display($module, 'level')
 						@la_display($module, 'description')
+						@la_display($module, 'precaution')
+						@la_display($module, 'avoid')
 					</div>
 				</div>
 			</div>
