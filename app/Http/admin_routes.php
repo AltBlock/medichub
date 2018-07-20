@@ -95,6 +95,6 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::post('/symptom', 'LA\PredictsController@symptom');
 	Route::get('/disease', 'LA\PredictsController@disease');
 	Route::post('/disease', 'LA\PredictsController@disease');
-	Route::get('/diseases', 'LA\PredictsController@disease');
-	Route::post('/diseases/{some}', 'LA\PredictsController@disease');
+	/*Route::get('/diseases', 'LA\PredictsController@disease');
+	Route::post('/diseases/{some}', 'LA\PredictsController@disease');*/
 });

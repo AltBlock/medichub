@@ -85,11 +85,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>{{ LAConfigs::getByKey('sitename') }}</b></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><b>{{ LAConfigs::getByKey('sitename') }}</b></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#home" class="smoothScroll">Home</a></li>
+                <li class="active"><a href="{{ url('/') }}" class="smoothScroll">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -148,7 +148,7 @@
 <div id="c">
     <div class="container">
         <p>
-            <strong>Copyright &copy; 2016. Powered by <a href="#"><b>Elegant Coders</b></a>
+            <strong>Copyright &copy; 2018. Powered by <a href="#"><b>Elegant Coders</b></a>
         </p>
     </div>
 </div>

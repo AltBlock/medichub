@@ -150,9 +150,12 @@ a:after {
 /* Copyright Wrap */
 
 #c {
+	width: 100%;
 	background: #222222;
 	padding-top: 15px;
 	text-align: center;
+	position: fixed;
+	bottom: 0;
 }
 
 #c p {

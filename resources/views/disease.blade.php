@@ -75,6 +75,14 @@
             font-size: 22px;
             font-weight: 500;
         }
+        .single-block {
+            border: 1px #c7c7c7 solid;
+            margin: 20px 0;
+            padding: 30px;
+            text-align: left;
+            font-size: 18px;
+            background: #fbfafac7;
+        }
     </style>
 
 </head>
@@ -90,11 +98,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>{{ LAConfigs::getByKey('sitename') }}</b></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><b>{{ LAConfigs::getByKey('sitename') }}</b></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#home" class="smoothScroll">Home</a></li>
+                <li class="active"><a href="{{ url('/') }}" class="smoothScroll">Home</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -117,22 +125,24 @@
                 <h3>These are your Potential Disease, Please Visit The Related Doctor</h3>
                 <ol class="diseaselist">
                     @foreach($diseaselist as $disease)
-                        <li><a href="/diseases/{{ $disease->id }}">{{ $disease->name }}</a></li>
-                        <div class="description">
-                            <ul>
-                                <li>
-                                    <span><strong>Desctiption:</strong></span><br>
-                                    {{ $disease->description }}
-                                </li>
-                                <li>
-                                    <span><strong>Precautions:</strong></span><br>
-                                    {{ $disease->precaution }}
-                                </li>
-                                <li>
-                                    <span><strong>To Avoid:</strong></span><br>
-                                    {{ $disease->avoid }}
-                                </li>
-                            </ul>
+                        <div class="single-block">
+                            <li><a href="/diseases/{{ $disease->id }}">{{ $disease->name }}</a></li>
+                            <div class="description">
+                                <ul>
+                                    <li>
+                                        <span><strong>Description:</strong></span><br>
+                                        {{ $disease->description }}
+                                    </li>
+                                    <li>
+                                        <span><strong>Precautions:</strong></span><br>
+                                        {{ $disease->precaution }}
+                                    </li>
+                                    <li>
+                                        <span><strong>To Avoid:</strong></span><br>
+                                        {{ $disease->avoid }}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     @endforeach
                 </ol>
@@ -147,7 +157,7 @@
 <div id="c">
     <div class="container">
         <p>
-            <strong>Copyright &copy; 2016. Powered by <a href="#"><b>Elegant Coders</b></a>
+            <strong>Copyright &copy; 2018. Powered by <a href="#"><b>Elegant Coders</b></a>
         </p>
     </div>
 </div>
